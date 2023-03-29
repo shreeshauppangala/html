@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <style>
+      body {
+        /* margin: 0px; */
+        font-size: 12px;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .details_text {
+        line-height: 30px;
+        font-size: 12px;
+      }
+
+      .flex_wrapper {
+        display: flex;
+      }
+
+      .box_head {
+        width: 85%;
+      }
+
+      .photo {
+        height: 170px;
+        width: 132px;
+        border-bottom-color: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: #000000;
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-right-color: #000000;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 1px;
+      }
+
+      .form_wrapper {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+      .padding {
+        padding-bottom: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 4px;
+      }
+
+      .border {
+        border-bottom-color: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 0.5px;
+        border-left-color: #000000;
+        border-left-style: solid;
+        border-left-width: 0.5px;
+        border-right-color: #000000;
+        border-right-style: solid;
+        border-right-width: 0.5px;
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 0.5px;
+      }
+
+      .border_top {
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .key {
+        background-color: #b7b7b7;
+        border-bottom-color: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 0.5px;
+        border-left-color: #000000;
+        border-left-style: solid;
+        border-left-width: 0.5px;
+        border-right-color: #000000;
+        border-right-style: solid;
+        border-right-width: 0.5px;
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 0.5px;
+        padding-bottom: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 4px;
+        font-weight: bold;
+        font-size: 10px;
+      }
+
+      .light_grey {
+        background-color: #b7b7b7;
+      }
+
+      .section_heading {
+        background-color: #434343;
+        border-bottom-color: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 0.5px;
+        border-left-color: #000000;
+        border-left-style: solid;
+        border-left-width: 0.5px;
+        border-right-color: #000000;
+        border-right-style: solid;
+        border-right-width: 0.5px;
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 0.5px;
+        color: #ffffff;
+        font-weight: bold;
+        padding-bottom: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 4px;
+        font-size: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border-bottom-color: #000000;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: #000000;
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-right-color: #000000;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-top-color: #000000;
+        border-top-style: solid;
+        border-top-width: 1px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+      }
+
+      th {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="details">
+      <p class="details_text">
+        <strong>ऋण आवेदन (Joint Liability Group)</strong><br />
+        <strong>एफिलियन फाइनेंस प्राइवेट लिमिटेड</strong><br />
+        CIN: U65900MH1996PTC09914<br />
+        <strong>पंजीकृत कार्यालय:</strong>दूसरी मंजिल, बी विंग, भाग्यश्री अपार्टमेंट<br />
+        डॉ. अम्बेडकर रोड, मुलुंड पश्चिम, मुंबई – 400080<br />
+        <strong>ई - मेल:</strong> <a href="mailto:customercare@aphelionfinance.com">customercare@aphelionfinance.com</a>
+        <strong>वेब:</strong> <a href="https://www.aphelionfinance.com">www.aphelionfinance.com</a><br />
+        <strong>फ़ोन नं :</strong><a href="tel:+919321193211">+91 93211 93211</a>
+      </p>
+      <div class="flex_wrapper">
+        <div class="photo"><i>farmer image</i></div>
+        <div class="photo"><i>cofarmer image</i></div>
+      </div>
+    </div>
+    <div class="form_wrapper">
+      <div class="flex_wrapper">
+        <div class="key" style="width:150px">आवेदक का प्रकार</div>
+        <div class="border" style="width:150px"></div>
+        <div class="border" style="width:calc(100% - 300px)"></div>
+      </div>
+      <div class="section_heading">दस्तावेजों की सूची :</div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:250px">मुख्य प्रमाण</div>
+        <div class="border" style="width:1000px"><i>Aadhar Number</i></div>
+        <div class="key" style="width:250px">दिनांक</div>
+        <div class="border" style="width:calc(100% - 300px)"><i>current date</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:250px">अन्य प्रमाण</div>
+        <div class="border" style="width:1000px"></div>
+        <div class="key" style="width:250px">फाइल संख्या</div>
+        <div class="border" style="width:calc(100% - 300px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:160px">शाखा का नाम</div>
+        <div class="border" style="width:430px"></div>
+        <div class="key" style="width:340px">शाखा और केंद्र के बीच की दूरी ( किलोमीटर )</div>
+        <div class="border" style="width:250px"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:250px">केंद्र का नाम</div>
+        <div class="border" style="width:1000px"><i>group name</i></div>
+        <div class="key" style="width:250px">केंद्र ID</div>
+        <div class="border" style="width:calc(100% - 300px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="section_heading">ऋण के नियम और शर्ते</div>
+        <div class="key">ऋण आवेदन (रुपए)</div>
+        <div class="border" style="width:98px"></div>
+        <div class="key">ऋण की अवधि (महीने)</div>
+        <div class="border" style="width:98px"></div>
+        <div class="key">बीमा शुल्क (रूपए)</div>
+        <div class="border" style="width:calc(100% - 603px)"><i>Insurance Premium - 0.4%of loan amount</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:162px">ब्याज दर (% बार्षिक घटते दर में ब्याज )</div>
+        <div class="border" style="width:150px"></div>
+        <div class="key" style="width:260px">प्रोसेसिंग फीस : 1% ऋण राशि पर 18% जी.एस.टी. अतिरिक्त</div>
+        <div class="border" style="width:calc(100% - 604px)"><i>Processing fee - 1% of loan amount</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:100px">भुगतान आवृत्ति</div>
+        <div class="border" style="width:102px"></div>
+        <div class="key">प्रोडक्ट्स</div>
+        <div class="border" style="width:100px"></div>
+        <div class="key" style="width:calc(100% - 300px);text-align: center;">पेयजल एवं स्वच्छता</div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:90px">ऋण का उद्देश्य</div>
+        <div class="border" style="width:240px"></div>
+        <div class="border" style="width:calc(100% - 320px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:165px">AFPL से ऋण (रूपए यदि है ) की राशि</div>
+        <div class="border" style="width:200px"></div>
+        <div class="key" style="width:170px">AFPL से चालू ऋण (JLG & IL ) ( रुपए )</div>
+        <div class="border" style="width:calc(100% - 550px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="section_heading">व्यक्तिगत जानकारी</div>
+        <div class="key">भौगोलिक विस्तार</div>
+        <div class="border" style="width:150.5px"></div>
+        <div class="key">गावं का नाम</div>
+        <div class="border" style="width:calc(100% - 401px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:90px">आवेदक का नाम</div>
+        <div class="border" style="width:calc(100% - 90px)"><i>name of the farmer</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key" style="width:90px">घर का पता</div>
+        <div class="border" style="width:calc(100% - 90px)"><i>address of farmer</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">निवास की जानकारी</div>
+        <div class="border" style="width:296px"></div>
+        <div class="key">स्वयं के घर की कीमत</div>
+        <div class="border" style="width:calc(100% - 500px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">वैवाहिक स्थिति</div>
+        <div class="border" style="width:195px"><i>marital status</i></div>
+        <div class="key">जन्म की तिथि</div>
+        <div class="border" style="width:195px"><i>dob</i></div>
+        <div class="key">आयु (वर्ष)</div>
+        <div class="border" style="width:calc(100% - 596.5px)"><i>age</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">धर्म</div>
+        <div class="border" style="width:230px"></div>
+        <div class="key">श्रेणी</div>
+        <div class="border" style="width:calc(100% - 210px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">आवेदक का व्यवसाय</div>
+        <div class="border" style="width:300px"></div>
+        <div class="key">आवेदक का शैक्षिक स्तर</div>
+        <div class="border" style="width:calc(100% - 517px)"><i>literacy of farmer</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">परिवार की कुल बार्षिक आय (रुपए )</div>
+        <div class="border" style="width:240px"><i>annual income for household of all family members</i></div>
+        <div class="key">क्या कोई मौजूदा बकाया ऋण है ?</div>
+        <div class="border" style="width:calc(100% - 557px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">यदि हाँ (ऋणदाता का नाम )</div>
+        <div class="border" style="width:275px"></div>
+        <div class="key">आवेदक का मोबाइल नं.</div>
+        <div class="border" style="width:calc(100% - 516px)"><i>mobile number</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="section_heading">गारंटर का विवरण</div>
+        <div class="key">नाम</div>
+        <div class="border" style="width:calc(100% - 121px)"><i>cofarmer name</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">जन्मतिथि</div>
+        <div class="border" style="width:170px"><i>dob - cofarmer</i></div>
+        <div class="key">आयु (वर्ष)</div>
+        <div class="border" style="width:170px"><i>cofarmer age</i></div>
+        <div class="key">व्यवसाय</div>
+        <div class="border" style="width:calc(100% - 502px)"></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">पता</div>
+        <div class="border" style="width:300px"><i>address of cofarmer</i></div>
+        <div class="key">सदस्य के साथ संबंध</div>
+        <div class="border" style="width:calc(100% - 431px)"><i>relationship between farmer and cofarmer</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="section_heading">बैंक खाता विवरण</div>
+        <div class="key">बैंक खाता क्रमांक</div>
+        <div class="border" style="width:calc(100% - 175px)"><i>bank a/c number</i></div>
+      </div>
+      <div class="flex_wrapper">
+        <div class="key">आवेदक के बैंक का नाम</div>
+        <div class="border" style="width:300px"><i>bank name</i></div>
+        <div class="key">बैंक शाखा का नाम</div>
+        <div class="border" style="width:calc(100% - 508px)"><i>branch</i></div>
+      </div>
+    </div>
+
+    <div class="border">
+      <div class="details box_head padding">
+        <p>ऋण आवेदन रसीद (JLG और उपभोक्ता उत्पाद )</p>
+        <p>पहल फाइनेंसियल सर्विसेज प्राइवेट लिमिटेड (AFPL)</p>
+        <p>तिथि:</p>
+      </div>
+      <p class="padding">आवेदक का नाम : <span style="color:#ff0000">शाखा का नाम:</span> केंद्र का नाम:</p>
+      <p class="padding">ऋण (JLG और उपभोक्ता उत्पाद) स्वीकृति पर निर्णय 60 दिनों के भीतर सूचित किया जाएगा और इसकी
+        सम्बंधित शाखा कार्यालय से जानकारी ली जा सकती है। कृपया इस रसीद पर अपनी फोटो लगाएं और मूल आई. डी. प्रमाण पत्रों
+        के साथ ऋण वितरण के समय साथ लाएं। AFPL अपने विवेक के आधार पर , बिना किसी कारण बताएं , ऋण को स्वीकृत या अस्वीकार
+        कर सकती है। आवेदक किसी प्रकार की भी ऋण सम्ब्नधित जानकारी के लिए AFPL में टोल फ्री नंबर 1800120123400 पर भी बात
+        कर सकते है।</p>
+      <div class="details" style="margin-top: 20px;">
+        <div class="border_top"> <strong class="padding"> ब्रांच मैनेजर के हस्ताक्षर </strong></div>
+        <div class="border_top"> <strong class="padding"> आवेदक के हस्ताक्षर / अंगूठे का निशान </strong></div>
+      </div>
+      <hr />
+    </div>
+    <div class="section_heading" style="text-align: center; margin-top: 20px;">परिवार की आय - व्यय की जानकारी</div>
+
+    <table>
+      <tr>
+        <th class="light_grey">घरेलू आय</th>
+        <th class="light_grey">प्रति माह (रुपए में)</th>
+        <th class="light_grey">घरेलू व्यय (रुपए में)</th>
+        <th class="light_grey">प्रति माह (रुपए में)</th>
+      </tr>
+      <tr>
+        <td class="light_grey">आवेदक की आय</td>
+        <td><i>farmer income</i></td>
+        <td>भोजन पर व्यय</td>
+        <td><i>food expenses</i></td>
+      </tr>
+      <tr>
+        <td class="light_grey">जीवनसाथी की आय</td>
+        <td><i>farmer spouse income</i></td>
+        <td>शिक्षा पर व्यय</td>
+        <td><i>educational expenses</i></td>
+      </tr>
+      <tr>
+        <td class="light_grey">अन्य आय</td>
+        <td><i>income of other family members except spouse</i></td>
+        <td>स्वास्थय पर व्यय</td>
+        <td><i>medical expenses</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>उपयोगिताओं पर व्यय (बिजली, फ़ोन, पानी आदि)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>अन्य सभी व्यय</td>
+        <td><i>other expenses (apart from food, education & medical)</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>AFPL ऋण की क़िस्त (यदि हो)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="light_grey">कुल मासिक घरेलू आय (A)</td>
+        <td><i>sum of above 3 field values</i></td>
+        <td>अन्य कोई ऋण की क़िस्त</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="light_grey">घरेलू शुद्ध आय (C) = (A-B)</td>
+        <td></td>
+        <td>कुल मासिक घरेलू व्यय (B)</td>
+        <td><i>sum of all above fields</i></td>
+      </tr>
+    </table>
+
+    <div class="section_heading" style="text-align: center; margin-top: 20px;">घर का दौरा (हाउस विजिट)</div>
+    <div class="flex_wrapper">
+      <div class="key">जिस व्यक्ति से आप मिले उसका नाम</div>
+      <div class="border" style="width:250px"></div>
+      <div class="key">आवेदक के साथ सम्बन्ध</div>
+      <div class="border" style="width:calc(100% - 529.5px)"></div>
+    </div>
+    <div class="flex_wrapper">
+      <div class="key">घर की स्तिथि</div>
+      <div class="border" style="width:100px"></div>
+      <div class="key">विस्तार</div>
+      <div class="border" style="width:100px"></div>
+      <div class="key">इस घर में आवेदक कितने साल से रह रहा/रही हैं</div>
+      <div class="border" style="width:calc(100% - 526px)"></div>
+    </div>
+    <div class="flex_wrapper">
+      <div class="key">घर में रह रहे परिवार के सदस्यों की संख्या</div>
+      <div class="border" style="width:130px"></div>
+      <div class="key">घर में संपत्ति का ब्यौरा</div>
+      <div class="border" style="width:calc(100% - 420.5px)"></div>
+    </div>
+    <div class="flex_wrapper">
+      <div class="key" style="width:80px">FCO के हस्ताक्षर</div>
+      <div class="border" style="width:120px"></div>
+      <div class="key" style="width:80px">हाउस विजिट की तारीख</div>
+      <div class="border" style="width:80px"></div>
+      <div class="key" style="width:50px">बीएम के हस्ताक्षर</div>
+      <div class="border" style="width:150px"></div>
+      <div style="width:120px">
+        <div class="key">हाउस विजिट की तारीख</div>
+        <div class="border" style="height:24px"></div>
+      </div>
+    </div>
+
+    <div class="details box_head">
+      <p>मंजूर गयी ऋण राशि (रुपए ) 19,300.00</p>
+      <p>ब्याज दर : 21.00 % बार्षिक घटते मूल दर पर</p>
+    </div>
+
+    <p>प्रसंस्करण शुल्क: ऋण राशि पर 1% (18 % जी. एस. टी अतिरिक्त ) बीमा शुल्क (रुपए) 166.00 <br />ऋण अवधि: 5 महीने</p>
+    <table>
+      <tr>
+        <td>एफसीओ का नाम</td>
+        <td>DEFAULT OFFICER</td>
+        <td>प्रस्ताव तिथि</td>
+        <td></td>
+        <td>
+          <p>प्रस्तावित राशि</p>
+          <p style="text-align: right;"><i>oan amount - order placed</i></p>
+        </td>
+      </tr>
+      <tr>
+        <td>बी. एम.के हस्ताक्षर</td>
+        <td></td>
+        <td>स्वीकृत तिथि</td>
+        <td></td>
+        <td>
+          <p>स्वीकृत राशि</p>
+          <p style="text-align: right;"><i>loan amount approved by nbfc</i></p>
+        </td>
+      </tr>
+      <tr>
+        <td>HO अधिकारी का नाम</td>
+        <td></td>
+        <td>मंजूरी तिथि</td>
+        <td></td>
+        <td>
+          <p>मंजूर राशि</p>
+          <p style="text-align: right;"><i>loan amount - dispersed( all 3 will be same)</i></p>
+        </td>
+      </tr>
+    </table>
+
+    <p><strong>नियम और शर्तें:</strong></p>
+
+    <ol>
+      <li>
+        ऋण सुविधा का लाभ उठाने के लिए सदस्य की आयु 18 से 60 वर्ष होना चाहिए।
+      </li>
+      <li>सदस्य ऋण आवेदन पत्र में उल्लिखित उद्देश्य के लिए ही ऋण राशि का उपयोग करेगा। कंपनी यह जांच करेगी कि उसने ऋण
+        राशि का उपयोग
+        उसके द्वारा बताएं गए उद्देश्य के लिए किया है या नहीं।</li>
+      <li>आवेदक शाखा द्वारा तय की गई दिन और समय पर केंद्र की बैठक में उपस्थित होगा और उक्त ऋण राशि (मूल + ब्याज) की
+        सामान मासिक
+        क़िस्त (ई.एम.आई.) का भुगतान करेगा।</li>
+      <li>छुट्टी या त्यौहार के समय ई.एम.आई. नियमित क़िस्त से पहले किसी भी पूर्व निर्धारित दिन और दिन और समय पर एकत्र की
+        जाएगी।
+        आवेदक इस के लिए अपनी सहमति देते हैं।</li>
+      <li>आवेदकों को अनिवार्य रूप से केंद्र की बैठक में AFPL द्वारा प्रदान किये गए लोन कार्ड की आवश्यकता है और आवेदक यह
+        सुनिश्चित
+        करें कि AFPL के प्रतिनिधि/कर्मचारी ने आवेदक द्वारा चुकाई क़िस्त की राशि लिखकर हस्ताक्षर कर दिए है।</li>
+      <li>यदि कोई आवेदक किश्त का भुगतान करने में असमर्थ है, तो उस केंद्र के अन्य सभी आवेदकों को केंद्र की बैठक के दौरान
+        किस्तों की
+        कमी को पूरा कर भुगतान के लिए उत्तरदायी है।</li>
+      <li>आवेदक एफसीओ को केवल एक महीने की क़िस्त दे सकते है। यदि आवेदक एक से अधिक क़िस्त का अग्रिम भुगतान करना चाहते है तो
+        उन्हें
+        उन्हें कार्यालय में ही भुगतान करना होगा।</li>
+      <li>AFPL ऋण लेने के लिए किसी प्रकार का कोई कोलैटरल / सुरक्षा जमा / मार्जिन / अन्य शुल्क स्वयं या तीसरे पक्ष द्वारा
+        आवेदक से
+        नहीं लेता हैं।</li>
+      <li>AFPL क़िस्त के भुगतान में देरी या किसी पूर्व भुगतान के लिए AFPL कोई जुर्माना नहीं लगता है।</li>
+      <li>AFPL ऋण मंजूर करने के लिए कोई कमीशन नहीं लेता है, अगर आवेदक किसी को कमीशन देता है तो यह उसकी अपनी व्यक्तिगत
+        देनदारी होगी
+        AFPL इसके लिए जिम्मेदार नहीं होगा।</li>
+      <li>ऋण पर ब्याज दरें आवधिक संसोधन के अधीन है और ब्याज दर में सभी परिवर्तन केवल भावी रूप से लागू होंगे।</li>
+      <li>ऋण समझौते और ऋण आवेदन की रसीद पर सदस्य के हस्ताक्षर / अंगूठे का निशान एक समान और सुसंगत होने चाहिए।</li>
+    </ol>
+    <p>मैं AFPL को भारतीय रिजर्व बैंक, क्रेडिट इंफॉर्मेशन कंपनीज (CIC), माइक्रोफाइनेंस की एसोसिएशन, थर्ड पार्टी सर्विस
+      प्रोवाइडर्स, बिमा कंपनी, ऑडिटर्स, रेटिंग एजेंसियों, फंडर्स और लैंडर्स के साथ अपनी व्यक्तिगत और वित्तीय जानकारी और
+      साथ ही सी.आई.सी. के साथ क्रेडिट डेटा साझा करने के लिए अधिकृत करती हूँ। मैं समझती हूँ कि AFPL हमारे डेटा को
+      सुरक्षित रखने के लिए हर संभव प्रयास करेगी। <br /> <strong>यदि मेरा ऋण आवेदन स्वीकृत हो जाता है, तो मैं AFPL को
+        लागू शुल्कों की कटौती के बाद ऋण आवेदन पत्र में उल्लिखित बैंक खाते में स्वीकृत ऋण राशि को वितरित करने के लिए
+        अधिकृत करती हूं। <br />सदस्य कॉल/ एसएमएस / व्हाट्सएप के माध्यम से या संवाद करने के लिए AFPL और उसके प्रतिनिधियों
+        को अधिकृत करते हैं। यह सहमति DNC/NDNC के लिए किसी भी पंजीकरण को ओवरराइड करती है और सदस्य ने AFPL की गोपनीयता
+        नीति को पढ़ा और स्वीकार किया है। <br />सदस्य ने ऋण आवेदन के लिए स्वेच्छा से के.वाई.सी की प्रति प्रस्तुत की है।
+        आधार कार्ड नम्बर के लिए, सदस्य को के.वाई.सी उद्देश्यों के लिए AFPL द्वारा अन्य वैकल्पिक माध्यम दिए गए हैं,
+        जिनमें दस्तावेज प्रस्तुत करके के. वाई.सी. की कॉपी भी शामिल है. सदस्य ने स्वेच्छा से आधार नंबर की प्रति को
+        के.वाई.सी. चुना है।</strong></p>
+
+    <div class="flex_wrapper">
+      <div style="width:33.33%">
+        <div class="border" style="height:40px"></div>
+        <div class="key" style="text-align: center;">आवेदक का हस्ताक्षर / अंगूठे का निशान</div>
+      </div>
+      <div style="width:33.33%">
+        <div class="border" style="height:40px"></div>
+        <div class="key" style="text-align: center;">एफसीओ के हस्ताक्षर</div>
+      </div>
+      <div style="width:33.33%">
+        <div class="border" style="height:40px"></div>
+        <div class="key" style="text-align: center;">गारंटर के हस्ताक्षर / अंगूठे का निशान </div>
+      </div>
+    </div>
+
+    <p><strong>फार्म के साथ जमा किए गए दस्तावेज :</strong></p>
+    <div class="flex_wrapper">
+      <div class="key">मुख्य प्रमाण</div>
+      <div class="border" style="width:296px"></div>
+      <div class="key">अन्य प्रमाण</div>
+      <div class="border" style="width:295px"></div>
+    </div>
+    <div class="flex_wrapper">
+      <div class="key" style="width:150px">आवेदक ने इन वैकल्पिक उत्पादों का विकल्प चुना है</div>
+      <div class="border" style="width:40%"></div>
+      <div class="border" style="width:40%"></div>
+    </div>
+
+  </body>
+</html>
