@@ -7,7 +7,7 @@
     <title>Loan Application</title>
     <style>
       body {
-        /* margin: 0px; */
+        margin: 0px;
         font-size: 12px;
       }
 
@@ -206,7 +206,7 @@
       </div>
       <div class="flex_wrapper">
         <div class="key" style="width: 160px">शाखा का नाम</div>
-        <div class="border" style="width: 430px"></div>
+        <div class="border" style="width: 430px">Mumbai</div>
         <div class="key" style="width: 340px">
           शाखा और केंद्र के बीच की दूरी ( किलोमीटर )
         </div>
@@ -223,29 +223,31 @@
       <div class="flex_wrapper">
         <div class="section_heading">ऋण के नियम और शर्ते</div>
         <div class="key">ऋण आवेदन (रुपए)</div>
-        <div class="border" style="width: 70px"></div>
+        <div class="border" style="width: 70px">
+          {{loan_amount_approved|floatformat:2}}
+        </div>
         <div class="key">ऋण की अवधि (महीने)</div>
-        <div class="border" style="width: 70px"></div>
+        <div class="border" style="width: 70px">6</div>
         <div class="key">बीमा शुल्क (रूपए)</div>
         <div class="border" style="width: 71px ;word-wrap: break-word;">
-          <i>{{insurance_premium}}</i>
+          <i>{{insurance_premium|floatformat:2}}</i>
         </div>
       </div>
       <div class="flex_wrapper">
         <div class="key" style="width: 162px">
           ब्याज दर (% बार्षिक घटते दर में ब्याज )
         </div>
-        <div class="border" style="width: 150px"></div>
+        <div class="border" style="width: 150px">21</div>
         <div class="key" style="width: 200px">
           प्रोसेसिंग फीस : 1% ऋण राशि पर 18% जी.एस.टी. अतिरिक्त
         </div>
         <div class="border" style="width: 80px; word-wrap: break-word;">
-          <i>{{processing_fee}}</i>
+          <i>{{processing_fee|floatformat:2}}</i>
         </div>
       </div>
       <div class="flex_wrapper">
         <div class="key" style="width: 100px">भुगतान आवृत्ति</div>
-        <div class="border" style="width: 102px"></div>
+        <div class="border" style="width: 102px">6</div>
         <div class="key">प्रोडक्ट्स</div>
         <div class="border" style="width:100px ;
         border-left-width: 0;border-left-color: white;"></div>
@@ -253,7 +255,7 @@
       </div>
       <div class="flex_wrapper">
         <div class="key" style="width: 90px">ऋण का उद्देश्य</div>
-        <div class="border" style="width: 240px"></div>
+        <div class="border" style="width: 240px">AGRICULTURE</div>
         <div class="border" style="width: 400px"></div>
       </div>
       <div class="flex_wrapper">
@@ -304,14 +306,14 @@
       </div>
       <div class="flex_wrapper">
         <div class="key">आवेदक का व्यवसाय</div>
-        <div class="border" style="width: 300px"></div>
+        <div class="border" style="width: 300px">Agri Services</div>
         <div class="key">आवेदक का शैक्षिक स्तर</div>
         <div class="border" style="width: 184px"><i>{{literacy_level}}</i></div>
       </div>
       <div class="flex_wrapper">
         <div class="key">परिवार की कुल बार्षिक आय (रुपए )</div>
         <div class="border" style="width: 240px">
-          <i>{{total_household_annual_income}}</i>
+          <i>{{total_household_annual_income|floatformat:2}}</i>
         </div>
         <div class="key">क्या कोई मौजूदा बकाया ऋण है ?</div>
         <div class="border" style="width: 144px"></div>
@@ -367,7 +369,7 @@
     <div class="border">
       <div class="details box_head padding">
         <p>ऋण आवेदन रसीद (JLG और उपभोक्ता उत्पाद )</p>
-        <p>पहल फाइनेंसियल सर्विसेज प्राइवेट लिमिटेड (AFPL)</p>
+        <p>एफिलियन फाइनेंस प्राइवेट लिमिटेड (AFPL)</p>
         <p>तिथि:</p>
       </div>
       <p class="padding">
@@ -409,21 +411,21 @@
       </tr>
       <tr>
         <td class="light_grey">आवेदक की आय</td>
-        <td><i>{{farmer_income}}</i></td>
+        <td><i>{{farmer_income|floatformat:2}}</i></td>
         <td>भोजन पर व्यय</td>
-        <td><i>{{monthly_expense_food}}</i></td>
+        <td><i>{{monthly_expense_food|floatformat:2}}</i></td>
       </tr>
       <tr>
         <td class="light_grey">जीवनसाथी की आय</td>
-        <td><i>{{spouce_annual_income}}</i></td>
+        <td><i>{{spouce_annual_income|floatformat:2}}</i></td>
         <td>शिक्षा पर व्यय</td>
-        <td><i>{{monthly_expense_education}}</i></td>
+        <td><i>{{monthly_expense_education|floatformat:2}}</i></td>
       </tr>
       <tr>
         <td class="light_grey">अन्य आय</td>
-        <td><i>{{other_family_person_annual_income}}</i></td>
+        <td><i>{{other_family_person_annual_income|floatformat:2}}</i></td>
         <td>स्वास्थय पर व्यय</td>
-        <td><i>{{monthly_expense_regular_medical}}</i></td>
+        <td><i>{{monthly_expense_regular_medical|floatformat:2}}</i></td>
       </tr>
       <tr>
         <td></td>
@@ -435,7 +437,7 @@
         <td></td>
         <td></td>
         <td>अन्य सभी व्यय</td>
-        <td><i>{{monthly_expense_other}}</i></td>
+        <td><i>{{monthly_expense_other|floatformat:2}}</i></td>
       </tr>
       <tr>
         <td></td>
@@ -445,7 +447,7 @@
       </tr>
       <tr>
         <td class="light_grey">कुल मासिक घरेलू आय (A)</td>
-        <td><i>{{total_household_annual_income}}</i></td>
+        <td><i>{{total_household_annual_income|floatformat:2}}</i></td>
         <td>अन्य कोई ऋण की क़िस्त</td>
         <td></td>
       </tr>
@@ -453,7 +455,7 @@
         <td class="light_grey">घरेलू शुद्ध आय (C) = (A-B)</td>
         <td></td>
         <td>कुल मासिक घरेलू व्यय (B)</td>
-        <td><i>{{monthly_expense_total}}</i></td>
+        <td><i>{{monthly_expense_total|floatformat:2}}</i></td>
       </tr>
     </table>
 
@@ -494,7 +496,7 @@
     </div>
 
     <div class="details box_head">
-      <p>मंजूर गयी ऋण राशि (रुपए ) 19,300.00</p>
+      <p>मंजूर गयी ऋण राशि (रुपए ) {{loan_amount_approved|floatformat:2}}</p>
       <p>ब्याज दर : 21.00 % बार्षिक घटते मूल दर पर</p>
     </div>
 
@@ -510,7 +512,9 @@
         <td></td>
         <td>
           <p>प्रस्तावित राशि</p>
-          <p style="text-align: right"><i>{{loan_amount_approved}}</i></p>
+          <p style="text-align: right">
+            <i>{{loan_amount_approved|floatformat:2}}</i>
+          </p>
         </td>
       </tr>
       <tr>
@@ -520,7 +524,9 @@
         <td></td>
         <td>
           <p>स्वीकृत राशि</p>
-          <p style="text-align: right;"><i>{{loan_amount_approved}}</i></p>
+          <p style="text-align: right;">
+            <i>{{loan_amount_approved|floatformat:2}}</i>
+          </p>
         </td>
       </tr>
       <tr>
@@ -531,7 +537,7 @@
         <td>
           <p>मंजूर राशि</p>
           <p style="text-align: right;">
-            <i>{{loan_amount_approved}}</i>
+            <i>{{loan_amount_approved|floatformat:2}}</i>
           </p>
         </td>
       </tr>
